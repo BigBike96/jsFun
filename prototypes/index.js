@@ -27,11 +27,17 @@ const kittyPrompts = {
 
     // Return an array of just the names of kitties who are orange e.g.
     // ['Tiger', 'Snickers']
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = kitties
+                    .filter(kitty => kitty.color === 'orange')
+                    .map(kitty => kitty.name);
+                    // 'implicit returns' (vs stated explicit) one-line functions do not need to use the 'return' keyword or {}.
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // Take in an array of kitties objects, return an array of the names of the kitties that are orange
+    // Use .filter() method to iterate through the array of kitties
+    // For each iteration, return only orange kitties
+    // Use a map (method) to return the kitty name for each element
   },
 
   sortByAge() {
